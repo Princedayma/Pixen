@@ -35,5 +35,6 @@ jobs:
         app_location: "pixellens-frontend"
         output_location: ""
         skip_app_build: false
+        production_branch: "main"
       env:
-        NODE_VERSION: '20'
+        NODE_VERSION: '20.9.0'
