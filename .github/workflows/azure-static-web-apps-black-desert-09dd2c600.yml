@@ -27,6 +27,7 @@ jobs:
         with:
           node-version: '20.14.0'
           cache: 'npm'
+          cache-dependency-path: pixellens-frontend/package-lock.json
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
       - name: Get Id Token
