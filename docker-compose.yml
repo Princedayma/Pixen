@@ -40,14 +40,15 @@ services:
       - DJANGO_SECRET_KEY=dev-secret-key-change-in-production
       - DJANGO_DEBUG=True
       - DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
-      - DB_NAME=pixellens
-      - DB_USER=postgres
-      - DB_PASSWORD=postgres
-      - DB_HOST=postgres
+      - DB_NAME=postgres
+      - DB_USER=Prince@pixen-db
+      - DB_PASSWORD=@Azure23!
+      - DB_HOST=pixen-db.postgres.database.azure.com
       - DB_PORT=5432
       - CELERY_BROKER_URL=redis://redis:6379/0
       - CELERY_RESULT_BACKEND=redis://redis:6379/0
       - CORS_ALLOWED_ORIGINS=http://localhost:3000
+      - DB_SSLMODE=require
     depends_on:
       postgres:
         condition: service_healthy
@@ -64,11 +65,12 @@ services:
     environment:
       - DJANGO_SECRET_KEY=dev-secret-key-change-in-production
       - DJANGO_DEBUG=True
-      - DB_NAME=pixellens
-      - DB_USER=postgres
-      - DB_PASSWORD=postgres
-      - DB_HOST=postgres
+      - DB_NAME=postgres
+      - DB_USER=Prince@pixen-db
+      - DB_PASSWORD=@Azure23!
+      - DB_HOST=pixen-db.postgres.database.azure.com
       - DB_PORT=5432
+      - DB_SSLMODE=require
       - CELERY_BROKER_URL=redis://redis:6379/0
       - CELERY_RESULT_BACKEND=redis://redis:6379/0
     depends_on:
